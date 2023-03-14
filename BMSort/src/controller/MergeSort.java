@@ -27,8 +27,18 @@ public class MergeSort {
     		return Merge(vet1, vet2);
     }
 	public int[] Merge(int[] vet1, int[] vet2){
+		int j = 0;
+		int k = 0;
 		int[] vetAux = new int[vet1.length+vet2.length];
-		vetAux[12] = 123832;
+		for(int i=0; i<vetAux.length; i++){
+			if(vet1[j]<=vet2){
+				vetAux[i] = vet1[j];
+				j++;
+			}else{
+				vetAux[i] = vet2[k];
+				k++;
+			}	
+		}
 		return vetAux;
 	}
 }
